@@ -1,0 +1,35 @@
+VIREO V7 — PHOTOGRAPHY CREDITS
+
+These images are not “copyright-free”; they are copyrighted works released under Creative Commons licences that permit reuse subject to the stated conditions. Keep these credits with the site and check the source page before any commercial launch or major modification.
+
+1. Lake District / Derwentwater hero
+Photographer: James Johnstone
+Licence: CC BY 2.0
+Source: https://commons.wikimedia.org/wiki/File:Derwentwater_Lake_District_National_Park.jpg
+Image URL: https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Derwentwater_Lake_District_National_Park.jpg/1280px-Derwentwater_Lake_District_National_Park.jpg
+
+2. Scafell Pike
+Photographer: original uploader Soloist (Wikipedia), later file history maintained on Commons
+Licence: CC BY-SA 3.0 (also GFDL on the source page)
+Source: https://commons.wikimedia.org/wiki/File:Scafell_Pike.jpg
+Image URL: https://upload.wikimedia.org/wikipedia/commons/a/a4/Scafell_Pike.jpg
+
+3. Ben Nevis
+Photographer: David Crocker
+Licence: CC BY-SA 2.0
+Source: https://commons.wikimedia.org/wiki/File:Ben_Nevis.jpg
+Image URL: https://upload.wikimedia.org/wikipedia/commons/0/0d/Ben_Nevis.jpg
+
+4. Yr Wyddfa / Snowdon
+Photographer: Hefin Owen
+Licence: CC BY-SA 2.0
+Source: https://commons.wikimedia.org/wiki/File:Yr_Wyddfa_%E2%80%93_Snowdon.jpg
+Image URL: https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Yr_Wyddfa_%E2%80%93_Snowdon.jpg/1280px-Yr_Wyddfa_%E2%80%93_Snowdon.jpg
+
+5. Mam Tor / Peak District
+Photographer: Gareth1953 All Right Now
+Licence: CC BY 2.0
+Source: https://commons.wikimedia.org/wiki/File:Peak_District_-_Mam_Tor_-_Sept_2014.jpg
+Image URL: https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Peak_District_-_Mam_Tor_-_Sept_2014.jpg/960px-Peak_District_-_Mam_Tor_-_Sept_2014.jpg
+
+Vireo note: The site currently references the hosted Wikimedia image files directly so the photo pack stays small. For a production launch, download and self-host approved copies, preserve the licence notices, and review each licence again.

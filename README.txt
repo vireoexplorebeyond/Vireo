@@ -1,13 +1,14 @@
-VIREO V6 — National Mountain Directory
+VIREO V7 — PHOTO + COMING SOON UPGRADE
 
-Upload every file in this folder to the ROOT of your GitHub Pages repository.
-The artwork SVGs are also root-level.
+Upload all files in this folder to the ROOT of your GitHub Pages repository.
 
-New directories:
-- 214 Wainwrights
-- 282 Scottish Munros
-- 15 Welsh 3000s
-- 126 Peak District hills with 30m+ prominence
+This version uses real Wikimedia Commons photography hosted at upload.wikimedia.org. The images are licensed for reuse under Creative Commons licences with attribution/share-alike requirements as noted in PHOTO_CREDITS.txt and photo-credits.html.
 
-The site intentionally excludes maps for now.
-Data references: Scottish Mountaineering Club / published Munro tables; BMC and established Welsh 3000s lists; Peak District hill list; Wainwright list references.
+The homepage now includes:
+- Real photography
+- Vireo logo
+- Vireo Passport — coming soon
+- European Trails — coming soon
+- Photography credits
+
+For a production launch, self-host approved image copies and keep the licence/attribution information.
