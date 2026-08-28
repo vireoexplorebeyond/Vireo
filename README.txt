@@ -1,30 +1,13 @@
-VIREO IMMERSIVE V5 — GITHUB UPLOAD PACK
+VIREO V6 — National Mountain Directory
 
-This version is configured for the exact GitHub structure used in the Vireo repository shown in the screenshot.
+Upload every file in this folder to the ROOT of your GitHub Pages repository.
+The artwork SVGs are also root-level.
 
-IMPORTANT:
-Upload EVERY file in this folder directly into the ROOT of the GitHub Pages repository.
-Do NOT put the SVG files into an images/ folder.
+New directories:
+- 214 Wainwrights
+- 282 Scottish Munros
+- 15 Welsh 3000s
+- 126 Peak District hills with 30m+ prominence
 
-Required root files:
-index.html
-lake-district.html
-helvellyn.html
-wainwrights.html
-fell.html
-styles.css
-script.js (if present / already in repository)
-wainwrights.js
-fell.js
-blencathra.svg
-catbells.svg
-helvellyn.svg
-lake-district.svg
-scafell-pike.svg
-
-The HTML pages reference the SVG artwork directly, e.g.:
-url('helvellyn.svg')
-
-After uploading, wait for GitHub Pages to deploy, then hard-refresh the website (Ctrl+F5).
-
-GitHub Pages publishes the files from the configured branch/folder. Keep the filenames exactly as supplied.
+The site intentionally excludes maps for now.
+Data references: Scottish Mountaineering Club / published Munro tables; BMC and established Welsh 3000s lists; Peak District hill list; Wainwright list references.
