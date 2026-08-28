@@ -1,73 +1,22 @@
-<!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Vireo — Explore Beyond</title>
-<meta name="description" content="Vireo — discover hikes, hidden gems and adventures across the UK.">
-<style>
-:root{--ink:#101310;--cream:#f5f2e9;--olive:#aeb77a;--muted:#c8c7bc;--panel:#171b17;--line:#30362d}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--ink);color:#f7f5ee;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
-a{color:inherit;text-decoration:none}.wrap{max-width:1200px;margin:auto;padding:0 28px}
-nav{position:absolute;top:0;left:0;right:0;z-index:3;height:86px;display:flex;align-items:center;justify-content:space-between}
-.logo{display:flex;align-items:center;gap:13px;font-weight:800;letter-spacing:.28em;font-size:22px}.bird{width:30px;height:24px;position:relative}.bird:before,.bird:after{content:"";position:absolute;background:var(--olive);border-radius:100% 0 100% 0;transform:rotate(28deg)}.bird:before{width:25px;height:9px;left:0;top:7px}.bird:after{width:18px;height:7px;left:12px;top:1px;transform:rotate(-25deg)}
-.navlinks{display:flex;gap:34px;font-size:13px;letter-spacing:.06em}.navlinks a{opacity:.9}.navlinks a:hover{color:var(--olive)}.navcta{background:var(--olive);color:#11150e;padding:13px 19px;border-radius:6px;font-size:12px;font-weight:800;letter-spacing:.04em}
-.hero{min-height:760px;display:flex;align-items:center;position:relative;overflow:hidden;background:linear-gradient(90deg,rgba(9,12,9,.98) 0%,rgba(9,12,9,.78) 39%,rgba(9,12,9,.12) 72%),radial-gradient(circle at 80% 25%,#8c7658 0,#394034 28%,#111610 65%);}.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.18),transparent 55%,#101310 100%);pointer-events:none}
-.hero-art{position:absolute;inset:0;opacity:.75;overflow:hidden}.mountain{position:absolute;bottom:-80px;width:0;height:0;border-left:330px solid transparent;border-right:330px solid transparent;border-bottom:560px solid #242b23;transform:rotate(4deg)}.m1{right:12%;}.m2{right:35%;bottom:-120px;border-left-width:430px;border-right-width:430px;border-bottom-width:620px;border-bottom-color:#182019}.sun{position:absolute;right:14%;top:23%;width:110px;height:110px;border-radius:50%;background:#e2c67f;box-shadow:0 0 100px 45px rgba(226,198,127,.18)}
-.hero-content{position:relative;z-index:2;max-width:650px;padding-top:60px}.eyebrow{color:var(--olive);font-size:12px;letter-spacing:.22em;text-transform:uppercase;margin-bottom:22px}.hero h1{font-size:clamp(62px,8vw,108px);line-height:.9;margin:0 0 28px;letter-spacing:-.055em}.hero p{font-size:18px;line-height:1.6;color:#deddd5;max-width:530px}.buttons{display:flex;gap:14px;margin-top:32px}.btn{padding:16px 22px;border-radius:6px;font-size:13px;font-weight:800}.primary{background:var(--olive);color:#11150e}.secondary{border:1px solid #777b70}.scroll{margin-top:70px;font-size:10px;letter-spacing:.25em;color:#aaa}
-.stats{background:#171b17;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.statgrid{display:grid;grid-template-columns:repeat(4,1fr)}.stat{padding:28px 24px;border-right:1px solid var(--line)}.stat:last-child{border:0}.stat b{display:block;font-size:22px}.stat span{font-size:12px;color:#aaa}
-section{padding:90px 0}.section-head{display:flex;justify-content:space-between;align-items:end;margin-bottom:35px}.section-head h2{font-size:38px;margin:5px 0 0;letter-spacing:-.03em}.section-head p{color:#aaa;margin:0}.view{color:var(--olive);font-size:12px;font-weight:800;letter-spacing:.08em}
-.searchbox{background:#1a1f19;border:1px solid var(--line);padding:7px;border-radius:8px;display:flex;max-width:720px;margin:0 auto 55px}.searchbox input{flex:1;background:transparent;border:0;outline:0;color:white;padding:15px;font-size:15px}.searchbox button{border:0;background:var(--olive);padding:0 22px;border-radius:5px;font-weight:800}
-.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{min-height:310px;border-radius:10px;overflow:hidden;position:relative;background:#252b24}.photo{height:100%;min-height:310px;background:linear-gradient(145deg,#75806b,#293329 42%,#111711)}.lake{background:linear-gradient(145deg,#78846f 0,#3e5546 45%,#19241e 46%,#6e624e 100%)}.dolo{background:linear-gradient(145deg,#b9aa92,#6e6b5b 42%,#30382f 43%,#171d18)}.lof{background:linear-gradient(145deg,#72869a,#273b46 48%,#121918 49%,#4f584d)}.card:after{content:"";position:absolute;inset:40% 0 0;background:linear-gradient(transparent,rgba(0,0,0,.9))}.cardtext{position:absolute;z-index:2;bottom:22px;left:22px}.tag{display:inline-block;background:rgba(10,12,10,.7);padding:6px 9px;border-radius:4px;font-size:10px;letter-spacing:.08em;margin-bottom:10px}.card h3{font-size:26px;margin:0 0 4px}.card small{color:#d0d0c8}
-.features{background:var(--cream);color:#151812}.featuregrid{display:grid;grid-template-columns:repeat(4,1fr);gap:0}.feature{padding:20px 28px;border-right:1px solid #d2d0c5}.feature:last-child{border:0}.icon{color:#7e8950;font-size:27px}.feature h3{font-size:15px;margin:16px 0 8px}.feature p{font-size:13px;line-height:1.6;color:#66685f}
-.routes{background:#121611}.routegrid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}.route{display:flex;justify-content:space-between;align-items:center;padding:24px;border:1px solid var(--line);border-radius:8px;background:#181d18}.route h3{margin:0 0 7px;font-size:18px}.route p{margin:0;color:#999;font-size:12px}.difficulty{color:var(--olive);font-size:11px;font-weight:800}
-footer{padding:50px 0;border-top:1px solid var(--line);color:#888;font-size:12px}.footerrow{display:flex;justify-content:space-between}
-@media(max-width:800px){.wrap{padding:0 18px}.navlinks{display:none}.navcta{padding:11px 14px}.hero{min-height:680px}.hero h1{font-size:64px}.hero p{font-size:16px}.statgrid,.featuregrid{grid-template-columns:1fr 1fr}.stat{border-bottom:1px solid var(--line)}.cards,.routegrid{grid-template-columns:1fr}.cards .card:nth-child(n+3){display:none}.section-head{display:block}.section-head .view{display:inline-block;margin-top:15px}.searchbox{margin-bottom:35px}.feature{border-bottom:1px solid #d2d0c5}.footerrow{display:block}.footerrow span{display:block;margin-top:12px}}
-</style>
-</head>
-<body>
-<header class="hero" id="home">
-<div class="hero-art"><div class="sun"></div><div class="mountain m1"></div><div class="mountain m2"></div></div>
-<div class="wrap">
-<nav><a class="logo" href="#home"><span class="bird"></span>VIREO</a><div class="navlinks"><a href="#destinations">DESTINATIONS</a><a href="#routes">ROUTES</a><a href="#guides">GUIDES</a><a href="#journal">JOURNAL</a><a href="#about">ABOUT</a></div><a class="navcta" href="#search">PLAN YOUR ADVENTURE</a></nav>
-<div class="hero-content"><div class="eyebrow">Adventure starts here</div><h1>EXPLORE<br>BEYOND.</h1><p>Hand-picked routes, hidden gems and practical guides for people who'd rather be out there than stuck inside.</p><div class="buttons"><a class="btn primary" href="#destinations">EXPLORE DESTINATIONS →</a><a class="btn secondary" href="#routes">BROWSE ROUTES</a></div><div class="scroll">SCROLL TO EXPLORE ↓</div></div>
-</div></header>
-
-<div class="stats"><div class="wrap statgrid"><div class="stat"><b>1,200+</b><span>Curated routes</span></div><div class="stat"><b>65</b><span>Countries to explore</span></div><div class="stat"><b>120K+</b><span>Potential adventures</span></div><div class="stat"><b>∞</b><span>Places still to discover</span></div></div></div>
-
-<main>
-<section id="search"><div class="wrap"><div class="section-head"><div><p>FIND YOUR NEXT ADVENTURE</p><h2>Where will you go?</h2></div></div><div class="searchbox"><input id="q" placeholder="Search a mountain, trail or destination…"><button onclick="searchRoutes()">SEARCH</button></div></div></section>
-
-<section id="destinations"><div class="wrap"><div class="section-head"><div><p>START EXPLORING</p><h2>Featured destinations</h2></div><a class="view" href="#destinations">VIEW ALL →</a></div>
-<div class="cards">
-<a class="card" href="#routes"><div class="photo lake"></div><div class="cardtext"><span class="tag">POPULAR</span><h3>Lake District</h3><small>England · Mountains · Lakes</small></div></a>
-<a class="card" href="#routes"><div class="photo dolo"></div><div class="cardtext"><span class="tag">FEATURED</span><h3>Dolomites</h3><small>Italy · Peaks · Via ferrata</small></div></a>
-<a class="card" href="#routes"><div class="photo lof"></div><div class="cardtext"><span class="tag">NEW</span><h3>Lofoten</h3><small>Norway · Fjords · Wilderness</small></div></a>
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Vireo — Explore Beyond</title><meta name="description" content="Vireo helps you find hikes, hidden gems and adventures."><link rel="stylesheet" href="styles.css"></head><body>
+<header><div class="wrap nav"><a class="logo" href="index.html"><span class="mark"></span>VIREO</a><nav class="navlinks"><a href="#destinations">DESTINATIONS</a><a href="#routes">ROUTES</a><a href="#guides">GUIDES</a><a href="#about">ABOUT</a></nav><a class="navbtn" href="#search">PLAN A WALK</a></div></header>
+<section class="hero"><div class="wrap hero-content"><div class="eyebrow">Outdoor discovery, simplified</div><h1>EXPLORE<br>BEYOND.</h1><p>Discover great walks, hidden gems and practical adventure guides — starting in the UK and growing far beyond.</p><div class="actions"><a class="btn primary" href="#destinations">EXPLORE DESTINATIONS →</a><a class="btn outline" href="#routes">BROWSE ROUTES</a></div><div class="search" id="search"><input id="siteSearch" placeholder="Search a mountain, trail or destination…"><button id="siteSearchBtn">SEARCH</button></div></div></section>
+<section class="section" id="destinations"><div class="wrap"><div class="sectionhead"><div><p>START EXPLORING</p><h2>Featured destinations</h2></div><a class="view" href="#destinations">VIEW ALL →</a></div><div class="cards">
+<a class="card" href="lake-district.html"><div class="visual lake"></div><div class="cardtext"><span class="tag">START HERE</span><h3>Lake District</h3><small>England · Mountains · Lakes</small></div></a>
+<a class="card" href="#"><div class="visual mount"></div><div class="cardtext"><span class="tag">COMING SOON</span><h3>Scottish Highlands</h3><small>Scotland · Peaks · Wilderness</small></div></a>
+<a class="card" href="#"><div class="visual fjord"></div><div class="cardtext"><span class="tag">COMING SOON</span><h3>Norway</h3><small>Fjords · Peaks · Adventure</small></div></a>
 </div></div></section>
-
-<section class="features" id="guides"><div class="wrap"><div class="section-head"><div><p>WHY VIREO</p><h2>Less scrolling. More exploring.</h2></div></div><div class="featuregrid">
-<div class="feature"><div class="icon">⌁</div><h3>CURATED ROUTES</h3><p>The best walks, selected and explained without the waffle.</p></div>
-<div class="feature"><div class="icon">⌖</div><h3>HIDDEN GEMS</h3><p>Waterfalls, viewpoints and places worth taking the detour for.</p></div>
-<div class="feature"><div class="icon">✧</div><h3>PRACTICAL GUIDES</h3><p>Parking, difficulty, distance and everything you'll want before you leave.</p></div>
-<div class="feature"><div class="icon">◇</div><h3>GEAR &amp; TRAVEL</h3><p>Useful recommendations without turning every walk into a shopping trip.</p></div>
+<section class="section paper" id="guides"><div class="wrap"><div class="sectionhead"><div><p>WHY VIREO</p><h2>Less scrolling. More exploring.</h2></div></div><div class="featuregrid">
+<div class="feature"><div class="ico">⌁</div><h3>CURATED ROUTES</h3><p>Clear, useful route information without the waffle.</p></div>
+<div class="feature"><div class="ico">⌖</div><h3>HIDDEN GEMS</h3><p>Waterfalls, viewpoints and places worth the detour.</p></div>
+<div class="feature"><div class="ico">✧</div><h3>PRACTICAL GUIDES</h3><p>Distance, difficulty, parking and what to expect.</p></div>
+<div class="feature"><div class="ico">◇</div><h3>GEAR & TRAVEL</h3><p>Useful recommendations for getting outside.</p></div>
 </div></div></section>
-
-<section class="routes" id="routes"><div class="wrap"><div class="section-head"><div><p>GET OUT THERE</p><h2>Popular routes</h2></div><a class="view" href="#search">FIND A ROUTE →</a></div><div id="routegrid" class="routegrid">
-<div class="route"><div><h3>Helvellyn via Striding Edge</h3><p>Lake District · 13 km · ~5h 30m</p></div><span class="difficulty">HARD</span></div>
-<div class="route"><div><h3>Catbells Circular</h3><p>Lake District · 5.3 km · ~2h</p></div><span class="difficulty">EASY</span></div>
-<div class="route"><div><h3>Scafell Pike</h3><p>Lake District · 11.5 km · ~5h</p></div><span class="difficulty">HARD</span></div>
-<div class="route"><div><h3>Blencathra</h3><p>Lake District · 10 km · ~4h</p></div><span class="difficulty">MODERATE</span></div>
+<section class="section" id="routeArea"><div class="wrap"><div class="sectionhead"><div><p>GET OUT THERE</p><h2>Popular routes</h2></div><a class="view" href="#search">SEARCH →</a></div><div class="routes">
+<a class="route" href="helvellyn.html"><div><h3>Helvellyn via Striding Edge</h3><p>Lake District · 13 km · ~5h 30m</p></div><span class="diff">HARD</span></a>
+<a class="route" href="#"><div><h3>Catbells Circular</h3><p>Lake District · 5.3 km · ~2h</p></div><span class="diff">EASY</span></a>
+<a class="route" href="#"><div><h3>Scafell Pike</h3><p>Lake District · 11.5 km · ~5h</p></div><span class="diff">HARD</span></a>
+<a class="route" href="#"><div><h3>Blencathra</h3><p>Lake District · 10 km · ~4h</p></div><span class="diff">MODERATE</span></a>
 </div></div></section>
-</main>
-
-<footer id="about"><div class="wrap footerrow"><span>© 2026 VIREO</span><span>EXPLORE BEYOND.</span></div></footer>
-<script>
-function searchRoutes(){
- const q=document.getElementById('q').value.toLowerCase().trim();
- const routes=[...document.querySelectorAll('.route')];
- routes.forEach(r=>r.style.display=(!q||r.innerText.toLowerCase().includes(q))?'flex':'none');
- document.getElementById('routes').scrollIntoView({behavior:'smooth'});
-}
-document.getElementById('q').addEventListener('keydown',e=>{if(e.key==='Enter')searchRoutes()});
-</script>
-</body></html>
+<section class="cta" id="about"><div class="wrap"><h2>Your next adventure is out there.</h2><p>Vireo is being built for people who want to spend less time searching and more time exploring.</p></div></section>
+<footer><div class="wrap foot"><span>© 2026 VIREO</span><span>EXPLORE BEYOND.</span></div></footer><script src="script.js"></script></body></html>
