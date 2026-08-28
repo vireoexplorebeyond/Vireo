@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 900">
+<defs><linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#6d8890"/><stop offset="1" stop-color="#d9d2b8"/></linearGradient></defs>
+<rect width="1440" height="900" fill="url(#sky)"/><circle cx="1180" cy="135" r="78" fill="#d8d28c" opacity=".9"/>
+<path d="M0 520 L190 300 330 475 505 210 700 500 860 280 1030 500 1210 240 1440 520 V900 H0Z" fill="#3f4d45"/>
+<path d="M0 610 L210 450 380 575 575 390 770 600 950 430 1110 590 1300 390 1440 570 V900 H0Z" fill="#26372f"/>
+<path d="M0 380 Q180 340 360 382 T720 372 T1100 386 T1440 360 V900 H0Z" fill="#496b67"/><path d="M0 690 Q220 640 440 705 T900 700 T1440 680 V900 H0Z" fill="#17231d" opacity=".92"/>
+<path d="M70 750 Q300 690 510 755 T1000 740 T1380 720" fill="none" stroke="#7e916e" stroke-width="8" opacity=".55"/>
+<text x="70" y="105" fill="#f4f0e4" font-family="Arial,sans-serif" font-size="34" font-weight="700" letter-spacing="8">VIREO</text>
+<text x="70" y="150" fill="#f4f0e4" font-family="Arial,sans-serif" font-size="16" letter-spacing="3">HELVELLYN — STRIDING EDGE</text></svg>

@@ -1,4 +1,5 @@
-Vireo immersive v3.
-Upload all files to the root of the GitHub Pages repository.
-The design now leans toward visual outdoor discovery rather than a trail-tracking app.
-Images use external illustrative photography URLs for the prototype; replace with owned/licensed images before commercial launch.
+VIREO IMMERSIVE V4
+Upload every file and the images/ folder to the ROOT of the GitHub Pages repository.
+Includes self-contained original SVG artwork, a cinematic discovery homepage, Lake District page, Helvellyn page, complete 214 Wainwright directory, search/filter/sort and individual fell detail template.
+NO maps.
+Route-specific details are intentionally not invented; add them only after verification.
