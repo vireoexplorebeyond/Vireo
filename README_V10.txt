@@ -1,0 +1,1 @@
+Vireo V10 — restored Vireo visual language + full fell descriptions + destination photography + coming-soon labels. Upload all files to the repository root. No maps or live location APIs are included yet.
