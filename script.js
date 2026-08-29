@@ -1,17 +1,4 @@
-
-const searchInput=document.querySelector('#siteSearch');
-const searchButton=document.querySelector('#siteSearchBtn');
-function runSearch(){
-  const q=(searchInput?.value||'').trim().toLowerCase();
-  if(!q){document.querySelector('#searchMessage')?.remove();return;}
-  const routes=[...document.querySelectorAll('.route')];
-  let shown=0;
-  routes.forEach(r=>{const ok=r.innerText.toLowerCase().includes(q);r.style.display=ok?'flex':'none';if(ok)shown++});
-  const msg=document.querySelector('#searchMessage')||document.createElement('p');
-  msg.id='searchMessage';msg.style.color='#aeb77a';msg.style.fontSize='12px';
-  msg.textContent=shown?`Showing ${shown} matching route${shown===1?'':'s'}.`:`No exact route found yet — Vireo is still growing.`;
-  document.querySelector('#routeArea')?.prepend(msg);
-  document.querySelector('#routeArea')?.scrollIntoView({behavior:'smooth'});
-}
-searchButton?.addEventListener('click',runSearch);
-searchInput?.addEventListener('keydown',e=>{if(e.key==='Enter')runSearch()});
+const D=window.VIREO_DATA;const esc=s=>String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));const stars=n=>"★".repeat(n)+"☆".repeat(5-n);
+function closeDrawer(){document.querySelector("#drawer")?.classList.remove("open")}function openProfile(x,label){const d=document.querySelector("#drawer");if(!d)return;d.querySelector(".drawer-panel").innerHTML=`<button class="close" onclick="closeDrawer()">CLOSE</button><div class="kicker">${esc(label)}</div><h2>${esc(x.name)}</h2><div class="height">${x.height}m</div><div class="meta"><span>${x.difficulty}</span><span class="stars">${stars(x.views)}</span>${x.region?`<span>${esc(x.region)}</span>`:""}</div><p>${esc(x.description)}</p><div class="drawer-note">Next layer for this profile: real photographs, exact location, parking, route information and community content. Those are intentionally not guessed yet.</div>`;d.classList.add("open")}
+function renderDirectory(items,o){const g=document.querySelector(o.grid),s=document.querySelector(o.search),sort=document.querySelector(o.sort),c=document.querySelector(o.count);let q="",m="height";function paint(){let a=items.filter(x=>!q||x.name.toLowerCase().includes(q));if(m==="alpha")a.sort((x,y)=>x.name.localeCompare(y.name));else if(m==="low")a.sort((x,y)=>x.height-y.height);else a.sort((x,y)=>y.height-x.height);c.textContent=`${a.length} of ${items.length} shown`;g.innerHTML=a.map(x=>`<button class="peak-card"><span class="rank">${x.height}m</span><span class="peak-name">${esc(x.name)}</span><span class="peak-height">${x.difficulty}</span><span class="peak-arrow">↗</span></button>`).join("");[...g.children].forEach((e,i)=>e.onclick=()=>openProfile(a[i],o.label))}s?.addEventListener("input",e=>{q=e.target.value.toLowerCase();paint()});sort?.addEventListener("change",e=>{m=e.target.value;paint()});paint()}
+document.addEventListener("click",e=>{if(e.target.id==="drawer")closeDrawer()});
